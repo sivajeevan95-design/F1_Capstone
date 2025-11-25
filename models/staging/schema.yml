@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: f1_data
+    schema: team_f1
+    tables:
+      - name: raw_stints  
+        identifier: raw_stints 
+        
+      - name: raw_drivers
+        identifier: raw_drivers
+
+      - name: raw_pit
+        identifier: raw_pit
+
+      - name: raw_laps
+        identifier: raw_laps
+
+      - name: raw_position
+        identifier: raw_position
+
+      - name: raw_sessions
+        identifier: raw_sessions
