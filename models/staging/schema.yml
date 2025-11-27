@@ -21,3 +21,9 @@ sources:
 
       - name: raw_sessions
         identifier: raw_sessions
+
+      - name: raw_race_control
+        identifier: raw_race_control
+
+      - name: raw_weather
+        identifier: raw_weather
