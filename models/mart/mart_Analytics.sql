@@ -5,7 +5,6 @@ WITH stint_features AS (
         driver_number,
 
         COUNT(*) AS stint_count,
-
         (COUNT(*) - 1) AS pit_count,
 
         STRING_AGG(
@@ -52,18 +51,47 @@ strategy_bins AS (
     FROM stint_features
 )
 
-SELECT 
-    s.*,
+SELECT
+    s.meeting_key,
+    s.session_key,
+    s.driver_number,
+
+
+    s.location,
+    s.date_start,
+    s.date_end,
+    s.country_name,
+    s.circuit_short_name,
+    s.year,
+    s.max_lap,
+    s.driver_name,
+    s.pos_diff,
+
+
     sb.stint_count,
     sb.pit_count,
     sb.compound_sequence,
     sb.avg_stint_length,
-    sb.total_race_laps,
     sb.min_stint_length,
     sb.max_stint_length,
     sb.stint_length_bin,
-    sb.pit_bin
+    sb.pit_bin,
 
-FROM {{ref('prep_session')}} s
+
+    w.avg_air_temp,
+    w.safety_car,
+    w.avg_track_temp,
+    w.rainfall_bool,
+    w.avg_humidity,
+    w.acg_pressure,
+    w.avg_wind_speed
+
+FROM {{ ref('prep_session') }} s
+
 LEFT JOIN strategy_bins sb
-USING (meeting_key, session_key, driver_number)
+    ON s.meeting_key  = sb.meeting_key
+   AND s.session_key  = sb.session_key
+   AND s.driver_number = sb.driver_number
+
+LEFT JOIN {{ ref('prep_weather_control') }} w
+    ON s.session_key = w.session_key
