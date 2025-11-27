@@ -54,7 +54,7 @@ strategy_bins AS (
 SELECT
     s.meeting_key,
     s.session_key,
-    s.driver_number,
+    s.full_name as driver_name,
 
 
     s.location,
@@ -64,7 +64,7 @@ SELECT
     s.circuit_short_name,
     s.year,
     s.max_lap,
-    s.driver_name,
+    s.full_name,
     s.pos_diff,
 
 
@@ -83,7 +83,7 @@ SELECT
     w.avg_track_temp,
     w.rainfall_bool,
     w.avg_humidity,
-    w.acg_pressure,
+    w.avg_pressure,
     w.avg_wind_speed
 
 FROM {{ ref('prep_session') }} s
