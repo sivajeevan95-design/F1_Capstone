@@ -83,7 +83,10 @@ SELECT
     w.rainfall_bool,
     w.avg_humidity,
     w.avg_pressure,
-    w.avg_wind_speed
+    w.avg_wind_speed,
+    r.dnf,
+    r.dns,
+    r.dsq
 
 FROM {{ ref('prep_session') }} s
 
@@ -94,3 +97,6 @@ LEFT JOIN strategy_bins sb
 
 LEFT JOIN {{ ref('prep_weather_control') }} w
     ON s.session_key = w.session_key
+
+LEFT JOIN {{ ref('prep_result')}} r 
+    ON s.session_key = r.session_key AND s.driver_number = r.driver_number
