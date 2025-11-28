@@ -27,3 +27,6 @@ sources:
 
       - name: raw_weather
         identifier: raw_weather
+
+      - name: raw_result
+        identifier: raw_result
