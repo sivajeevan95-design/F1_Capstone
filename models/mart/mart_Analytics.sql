@@ -64,7 +64,6 @@ SELECT
     s.circuit_short_name,
     s.year,
     s.max_lap,
-    s.full_name,
     s.pos_diff,
 
 
