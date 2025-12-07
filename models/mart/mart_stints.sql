@@ -7,7 +7,7 @@ WITH base_stints AS (
         compound,
         lap_start,
         lap_end,
-        tyre_age_at_start,
+        stint_pos_dif,
 
         (lap_end - lap_start + 1) AS stint_length,
 
@@ -46,11 +46,11 @@ SELECT
     st.stint_length,
     st.lap_start,
     st.lap_end,
-    st.tyre_age_at_start,
     st.stint_length_bin,
 
     st.total_pits,
     st.pit_strategy_bin,
+    st.stint_pos_dif,
 
     s.location,
     s.date_start,
@@ -58,7 +58,7 @@ SELECT
     s.circuit_short_name,
     s.year,
     s.max_lap,
-    s.pos_diff,
+
 
     w.avg_air_temp,
     w.safety_car,
