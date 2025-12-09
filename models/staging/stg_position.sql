@@ -16,13 +16,17 @@ aggregated_positions AS (
     SELECT DISTINCT
         session_key,
         driver_number,
+        start_pos,
+        end_pos,
         (start_pos - end_pos) as pos_diff
     FROM DriverStats
 )
 SELECT
     s.*,                
     ap.driver_number,   
-    ap.pos_diff         
+    ap.start_pos,
+    ap.end_pos,
+    ap.pos_diff      
 FROM {{source('f1_data', 'raw_sessions')}} s
 JOIN aggregated_positions ap 
     ON s.session_key = ap.session_key
