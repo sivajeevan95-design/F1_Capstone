@@ -64,7 +64,10 @@ SELECT
     s.circuit_short_name,
     s.year,
     s.max_lap,
-    s.pos_diff,
+    s.race_start_pos,
+    s.race_end_pos,
+    s.race_pos_dif,
+    s.headshot_url,
 
 
     sb.stint_count,
