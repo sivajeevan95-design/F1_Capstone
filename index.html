@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Portfolio Links</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+        }
+        h1 { text-align: center; color: #1d1d1f; margin-bottom: 30px; }
+        .person-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+        }
+        .person-card:hover { transform: translateY(-2px); }
+        .name { font-size: 22px; font-weight: bold; margin-bottom: 15px; color: #333; border-bottom: 2px solid #007bff; display: inline-block; }
+        .links { display: flex; flex-direction: column; gap: 10px; }
+        .btn {
+            display: block;
+            padding: 12px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .btn-email { background: #e9ecef; color: #333; }
+        .btn-linkedin { background: #0077b5; color: white; }
+        .btn-github { background: #24292e; color: white; }
+        .btn-tableau { background: #e97627; color: white; }
+        .btn:hover { opacity: 0.9; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Our Portfolios</h1>
+
+    <div class="person-card">
+        <div class="name">Sivajeevan Sivanesan</div>
+        <div class="links">
+            <a href="mailto:sivajeevan95@gmail.com" class="btn btn-email">Email</a>
+            <a href="https://www.linkedin.com/in/sivajeevan-sivanesan/" target="_blank" class="btn btn-linkedin">LinkedIn</a>
+            <a href="https://github.com/sivajeevan95-design" target="_blank" class="btn btn-github">GitHub</a>
+            <a href="https://public.tableau.com/app/profile/sivajeevan.sivanesan/vizzes" target="_blank" class="btn btn-tableau">Tableau Portfolio</a>
+        </div>
+    </div>
+
+    <div class="person-card">
+        <div class="name">Kevin Dicke</div>
+        <div class="links">
+            <a href="mailto:kevin.dicke23@gmail.com" class="btn btn-email">Email</a>
+            <a href="https://www.linkedin.com/in/kevin-dicke" target="_blank" class="btn btn-linkedin">LinkedIn</a>
+            <a href="https://github.com/kevindicke13" target="_blank" class="btn btn-github">GitHub</a>
+            <a href="https://public.tableau.com/app/profile/kevin.dicke/vizzes" target="_blank" class="btn btn-tableau">Tableau Portfolio</a>
+        </div>
+    </div>
+
+    <div class="person-card">
+        <div class="name">Jamil Shweish</div>
+        <div class="links">
+            <a href="mailto:jamil.shweish@gmail.com" class="btn btn-email">Email</a>
+            <a href="https://www.linkedin.com/in/jamil-shweish-097845294/" target="_blank" class="btn btn-linkedin">LinkedIn</a>
+            <a href="https://github.com/jamil-shweish" target="_blank" class="btn btn-github">GitHub</a>
+            <a href="https://public.tableau.com/app/profile/jamil.shweish/vizzes" target="_blank" class="btn btn-tableau">Tableau Portfolio</a>
+        </div>
+    </div>
+
+    <div class="person-card">
+        <div class="name">Patric Mertes</div>
+        <div class="links">
+            <a href="mailto:patricmertes@proton.me" class="btn btn-email">Email</a>
+            <a href="https://www.linkedin.com/in/patricmertes" target="_blank" class="btn btn-linkedin">LinkedIn</a>
+            <a href="https://github.com/frive85" target="_blank" class="btn btn-github">GitHub</a>
+            <a href="https://public.tableau.com/app/profile/patric.mertes/vizzes" target="_blank" class="btn btn-tableau">Tableau Portfolio</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
